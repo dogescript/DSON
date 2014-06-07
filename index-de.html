@@ -1,0 +1,271 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="en">
+<title>HGSN - Hundegegenstandsserialisierungsnotation</title>
+<style>
+body {
+    background-color: linen;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+ul ul {
+    list-style: disc;
+}
+hr {
+    background-color: black;
+    border: 0px;
+    color: black;
+    height: 2px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: navy;
+}
+a:visited {
+    color: maroon;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+a:active {
+    color: red;
+}
+.box {
+	margin-right: 250px;
+	border: 2px solid black;
+	padding: 10px;
+	background-color: white;
+}
+pre {
+	font-family: serif;
+	overflow: auto;
+}
+* {
+	text-transform: uppercase;
+}
+</style>
+</head><body>
+<table border="0" width="100%">
+  <tbody><tr>
+    <td align="center" valign="middle" width="160"><img src="doge.gif"
+        alt="DSON logo" align="left" border="0" height="160" width="160"></td>
+    <td align="center" valign="middle">
+      <div style="border: 2px solid black; padding: 10px; background-color: white; margin-left: 40px; margin-right: 40px; font-family: serif;">
+        <h1 align="center">Achtung: Hunde&shy;gegenstands&shy;serialisierungs&shy;notation</h1>
+      </div>
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+<div align="center"><small>
+<a href="index.html">English</a> -
+<a href="index-si.html">Shiba Inu</a> -
+<a href="index-de.html">Deutsch</a>
+</small></div>
+<hr>
+<div style="float: right; border: 2px solid black; margin: 10px; padding: 10px; background-color: white;">
+  <dl>
+    <dt><i>object</i></dt>
+    <dd><tt><b>such wow</b></tt><br>
+      <tt><b>such</b></tt> <i>members</i> <tt><b>wow</b></tt> </dd>
+    <dt><tt><b></b></tt></dt>
+    <dt><i>members</i></dt>
+    <dd><i>pair</i><br>
+        <i>pair</i> <tt><b>,</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>.</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>!</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>?</b></tt> <i>members</i></dd>
+    <dt><i>pair</i></dt>
+    <dd><i>string</i> <tt><b>is</b></tt> <i>value</i></dd>
+    <dt><i>array</i></dt>
+    <dd><tt><b>so many</b></tt><br>
+      <tt><b>so</b></tt> <i>elements</i> <tt><b>many</b></tt></dd>
+    <dt><i>elements</i></dt>
+    <dd><i>value</i> <br>
+        <i>value</i> <tt><b>and</b></tt> <i>elements</i> <br>
+        <i>value</i> <tt><b>also</b></tt> <i>elements</i></dd>
+    <dt><i>value</i></dt>
+    <dd><i>string</i><br>
+      <i>number</i><br>
+      <i>object</i><br>
+      <i>array</i><br>
+      <tt><b>yes</b></tt><br>
+      <tt><b>no</b></tt><br>
+      <tt><b>empty</b></tt></dd>
+  </dl>
+  <hr align=center width=144>
+  <dl>
+    <dt><i>string</i></dt>
+    <dd><tt><b>""</b></tt><br>
+      <tt><b>"</b></tt> <i>chars</i> <tt><b>"</b></tt></dd>
+    <dt><i>chars</i></dt>
+    <dd><i>char</i><br>
+      <i>char chars</i></dd>
+    <dt><i>char</i></dt>
+    <dd><small><i>any-Unicode-character-</i></small><br>
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;<i>except-</i></small><b><tt>"</tt></b><small><i>-or-</i></small><b><tt>\</tt></b><small><i>-or-</i></small><br>
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;<i>control-character</i></small><br>
+      <tt><b>\"</b></tt><br>
+      <tt><b>\\</b></tt><br>
+      <tt><b>\/</b></tt><br>
+      <tt><b>\b</b></tt><br>
+      <tt><b>\f</b></tt><br>
+      <tt><b>\n</b></tt><br>
+      <tt><b>\r</b></tt><br>
+      <tt><b>\t</b></tt><br>
+    <tt><b>\u</b></tt> <i>six octal-digits</i> </dd>
+    <dt><i>number</i></dt>
+    <dd><i>int</i><br>
+        <i>int frac</i><br>
+        <i>int exp</i><br>
+        <i>int frac exp</i>
+    </dd>
+    <dt><i>int</i></dt>
+    <dd><i>digit</i><br>
+      <i>digit1-9 digits</i>
+    <br><tt><b>-</b></tt> <i>digit</i><br>
+      <tt><b>-</b></tt> <i>digit1-9 digits</i>
+    </dd>
+    <dt><i>frac</i></dt>
+    <dd><b><tt>.</tt></b> <i>digits</i></dd>
+    <dt><i>exp</i></dt>
+    <dd><i>very</i> <i>digits</i></dd>
+    <dt><i>digits</i></dt>
+    <dd><i>digit</i><br>
+        <i>digit</i> <i>digits</i></dd>
+    <dt><i>very</i></dt>
+    <dd><b><tt>very</tt></b><br>
+<b><tt>very+</tt></b><br>
+<b><tt>very-</tt></b><br>
+<b><tt>VERY</tt></b><br>
+<b><tt>VERY+</tt></b><br>
+<b><tt>VERY-</tt></b></dd>
+  </dl>
+</div>
+
+<p><b>HGSN</b> (Hundegegenstandsserialisierungsnotation) ist ein Datentauschformat, welches für Hunde der "Shiba Inu"-Rasse leicht zu lesen und schreiben ist.
+  Es ist für Maschinen leicht zu verstehend und erstellen. Es ist so entworfen, der <a href="https://github.com/remixz/dogescript">HundeNotiz Programmiersprache</a> möglichst zu ähneln.
+  HGSN ist ein Textformat, das wenig Sprachenunabhängigkeit aufweist, dafür aber von den meisten Unterhundrassen verstanden wird.
+  Wegen diesen Eigenschaften eignet sich HGSN perfekt als Datentauschformat für alles mit "Shiba Inu"-Interkommunikationsrelevanz.</p>
+<p>
+  Beispiele für HGSN und seine JSON-Gegenstücke:
+  <pre class="box">
+    such "foo" is "bar". "doge" is "shibe" wow    <font color="gray">// {"foo": "bar", "doge": "shibe"}</font>
+    such "foo" is such "shiba" is "inu", "doge" is yes wow wow    <font color="gray">// {"foo": {"shiba": "inu", "doge": true}}</font>
+    such "foo" is so "bar" also "baz" and "fizzbuzz" many wow    <font color="gray">// {"foo": ["bar", "baz", "fizzbuzz"]}</font>
+    such "foo" is 42very3 wow    <font color="gray">// {"foo": 34e3}</font></pre>
+</p>
+<p>HGSN, wie JSON, basiert auf folgenden zwei Strukturen:</p>
+<ul>
+  <li>Eine Sammlung an Name-Wert-Paaren. In verschiedenen Sprachen wird dies in Form 
+    eines <i>Gegenstandes</i>, <i>eines Eintrags</i>, <i>einer Struktur</i>, <i>eines Wörterbuchs</i>, <i>einer Haschischtabelle</i>, <i>einer Schlüsselliste</i>, oder
+    einer <i>Asozialenliste</i> realisiert.</li>
+  <li>Eine geordnete Liste mit Werten. Wie beim Fußball.
+    In den meisten Sprachen ist dies eine <i>Reihe</i>, ein <i>Vektor</i>, eine <i>Liste</i> oder eine <i>Sequenz</i>.</li>
+</ul>
+<p>Diese sind nationale und universelle Datenstrukturen.
+Virtuell unterstützen alle modernen hundefreundlichen Programmiersprachen sie.
+Es ergibt Sinn, dass ein Datenformat, welches zum Informationstausch zwischen Programmiersprachen dient, auf diesen aufbaut.
+Alle Schlüsselwörter müssen in HGSN nichtgroß geschrieben vorliegen.</p>
+
+<p>In HGSN nehmen Sie diese Strukturen an:</p>
+<p>Ein <i>Gegenstand</i> ist eine ungeordnete Unterliste, die Name-Wert-Paare enthält.
+  Ein Gegenstand beginnt mit <tt>such</tt> und endet auf <tt>wow</tt>.
+  Jeder Name wird gefolgt von einem <tt>is</tt> und die einzelnen Paare werden getrennt durch <tt>,</tt> (Komma) oder <tt>.</tt> (Punkt) oder <tt>!</tt> oder <tt>?</tt>.</p>
+
+<p><img src="object.png"></p>
+
+<p>Ein <i>Reihe</i> ist eine geordnete Liste.
+  Eine Reihe beginnt mit <tt>so</tt> und endet auf <tt>many</tt>.
+  Ihre Einträge werden getrennt durch <tt>and</tt> oder <tt>also</tt>.</p>
+
+<p><img src="array.png"></p>
+
+<p>Ein <i>Wert</i> kann ein <i>Faden</i> in Doppelzitaten oder eine <i>Nummer</i>
+  oder <tt>yes</tt> oder <tt>no</tt> oder <tt>empty</tt> oder ein <i>Gegenstand</i> oder
+  eine <i>Reihe</i> sein. Diese Strukturen können verschachtelt werden.</p>
+
+<p><img src="value.gif"></p>
+
+<p>Ein <i>Faden</i> ist eine Sequenz an Null oder mehr Universellkodierungszeichen, umhüllt von Doppelzitaten mit Rückschrägstrichescapaden.
+  Ein Zeichen wird dargestellt als ein Ein-Zeichen-Faden.
+  Ein Faden ist an die Fäden aus C oder Java angelehnt.</p>
+
+<p><img src="string.png"></p>
+
+<p>Eine <i>Nummer</i> ist ebenfalls an die Nummern aus C oder Java angelehnt, außer dass sie im hundefreindlichen Oktalzahlsystem dargstellt wird.</p>
+
+<p><img src="number.gif"></p>
+
+<p>Weiße können überall eingesetzt werden. Ein paar Eigenheiten ausnemend, ist dies eine Komplettbeschreibung der Sprache.</p>
+
+
+<hr>
+<div style="float: left">
+  <p>HGSN Bibliotheken, Versteher und andere Kinder von verwandter Offenquellenweichware:</p>
+  <ul>
+	<li>
+		ANTLR4: <span style="color: blueviolet;">wow. very unique. never hear.</span>
+		<ul>
+			<li><a href="https://github.com/sidfarkus/such-dson">such-dson</a>: DSON grammar plugin (by sidfarkus)</li>
+		</ul>
+	</li>
+	<li>
+		JavaScript: <span style="color: green;">so retro. much hipster.</span>
+		<ul>
+			<li><a href="http://jsfiddle.net/Ha65v/3/">DogeONtoJSON</a>: Converter with tests and examples (by baseketball)</li>
+			<li><a href="https://github.com/paulminer/JSON-js/blob/master/dson2.js">dson2.js</a>: Parser/Serializer, based on JSON2 (by paul_miner)</li>
+			<li><a href="https://github.com/kpdecker/dogeon">dogeon</a>: Parser/Serializer for Node.js (by kpdecker)</li>
+		</ul>
+	</li>
+	<li>
+		DogeScript: <span style="color: red;">wow. very inception.</span>
+		<ul>
+			<li><a href="https://github.com/remixz/DSON.djs">DSON.djs</a>: Parser/Serializer (by remixz, the god of DogeScript himself)</li>
+		</ul>
+	</li>
+	<li>
+		Perl 6: <span style="color: cornflowerblue;">get real.</span>
+		<ul>
+			<li><a href="https://github.com/xfix/Acme-DSON">Acme::DSON</a>: Parser/Serializer (by xfix)</li>
+		</ul>
+	</li>
+	<li>
+		Python: <span style="color: darkmagenta;">very spider. or is snake?</span>
+		<ul>
+			<li><a href="https://github.com/liam-middlebrook/JSONtoDogeON">JSONtoDogeON</a>: Parser/Serializer (by Liam Middlebrook)</li>
+		</ul>
+	</li>
+  </ul>
+</div>
+<br clear=left>
+<hr>
+<div>
+  <ul>
+    <li><a href="http://json.org/">The original JSON standard</a>, thank you for this Douglas Crockford!</li>
+    <li><a href="https://github.com/remixz/dogescript">Check out DogeScript for more shibe!</a></li>
+  </ul>
+</div>
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://dogeon.org/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 6]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://dogeon.org/piwik/piwik.php?idsite=6" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body></html>

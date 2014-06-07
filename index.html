@@ -1,0 +1,280 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="en">
+<title>DSON - Doge Serialized Object Notation</title>
+<style>
+body {
+    background-color: linen;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+ul ul {
+    list-style: disc;
+}
+hr {
+    background-color: black;
+    border: 0px;
+    color: black;
+    height: 2px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: navy;
+}
+a:visited {
+    color: maroon;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+a:active {
+    color: red;
+}
+.box {
+	margin-right: 250px;
+	border: 2px solid black;
+	padding: 10px;
+	background-color: white;
+}
+pre {
+	font-family: serif;
+	overflow: auto;
+}
+</style>
+</head><body>
+<table border="0" width="100%">
+  <tbody><tr>
+    <td align="center" valign="middle" width="160"><img src="doge.gif"
+        alt="DSON logo" align="left" border="0" height="160" width="160"></td>
+    <td align="center" valign="middle">
+      <div style="border: 2px solid black; padding: 10px; background-color: white; margin-left: 40px; margin-right: 40px; font-family: serif;">
+        <h1 align="center">Introducing Doge Serialized Object Notation</h1>
+      </div>
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+<div align="center"><small>
+<a href="index.html">English</a> -
+<a href="index-si.html">Shiba Inu</a> -
+<a href="index-de.html">Deutsch</a>
+</small></div>
+<hr>
+<div style="float: right; border: 2px solid black; margin: 10px; padding: 10px; background-color: white;">
+  <dl>
+    <dt><i>object</i></dt>
+    <dd><tt><b>such wow</b></tt><br>
+      <tt><b>such</b></tt> <i>members</i> <tt><b>wow</b></tt> </dd>
+    <dt><tt><b></b></tt></dt>
+    <dt><i>members</i></dt>
+    <dd><i>pair</i><br>
+        <i>pair</i> <tt><b>,</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>.</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>!</b></tt> <i>members</i><br>
+        <i>pair</i> <tt><b>?</b></tt> <i>members</i></dd>
+    <dt><i>pair</i></dt>
+    <dd><i>string</i> <tt><b>is</b></tt> <i>value</i></dd>
+    <dt><i>array</i></dt>
+    <dd><tt><b>so many</b></tt><br>
+      <tt><b>so</b></tt> <i>elements</i> <tt><b>many</b></tt></dd>
+    <dt><i>elements</i></dt>
+    <dd><i>value</i> <br>
+        <i>value</i> <tt><b>and</b></tt> <i>elements</i> <br>
+        <i>value</i> <tt><b>also</b></tt> <i>elements</i></dd>
+    <dt><i>value</i></dt>
+    <dd><i>string</i><br>
+      <i>number</i><br>
+      <i>object</i><br>
+      <i>array</i><br>
+      <tt><b>yes</b></tt><br>
+      <tt><b>no</b></tt><br>
+      <tt><b>empty</b></tt></dd>
+  </dl>
+  <hr align=center width=144>
+  <dl>
+    <dt><i>string</i></dt>
+    <dd><tt><b>""</b></tt><br>
+      <tt><b>"</b></tt> <i>chars</i> <tt><b>"</b></tt></dd>
+    <dt><i>chars</i></dt>
+    <dd><i>char</i><br>
+      <i>char chars</i></dd>
+    <dt><i>char</i></dt>
+    <dd><small><i>any-Unicode-character-</i></small><br>
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;<i>except-</i></small><b><tt>"</tt></b><small><i>-or-</i></small><b><tt>\</tt></b><small><i>-or-</i></small><br>
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;<i>control-character</i></small><br>
+      <tt><b>\"</b></tt><br>
+      <tt><b>\\</b></tt><br>
+      <tt><b>\/</b></tt><br>
+      <tt><b>\b</b></tt><br>
+      <tt><b>\f</b></tt><br>
+      <tt><b>\n</b></tt><br>
+      <tt><b>\r</b></tt><br>
+      <tt><b>\t</b></tt><br>
+    <tt><b>\u</b></tt> <i>six octal-digits</i> </dd>
+    <dt><i>number</i></dt>
+    <dd><i>int</i><br>
+        <i>int frac</i><br>
+        <i>int exp</i><br>
+        <i>int frac exp</i>
+    </dd>
+    <dt><i>int</i></dt>
+    <dd><i>digit</i><br>
+      <i>digit1-9 digits</i>
+    <br><tt><b>-</b></tt> <i>digit</i><br>
+      <tt><b>-</b></tt> <i>digit1-9 digits</i>
+    </dd>
+    <dt><i>frac</i></dt>
+    <dd><b><tt>.</tt></b> <i>digits</i></dd>
+    <dt><i>exp</i></dt>
+    <dd><i>very</i> <i>digits</i></dd>
+    <dt><i>digits</i></dt>
+    <dd><i>digit</i><br>
+        <i>digit</i> <i>digits</i></dd>
+    <dt><i>very</i></dt>
+    <dd><b><tt>very</tt></b><br>
+<b><tt>very+</tt></b><br>
+<b><tt>very-</tt></b><br>
+<b><tt>VERY</tt></b><br>
+<b><tt>VERY+</tt></b><br>
+<b><tt>VERY-</tt></b></dd>
+  </dl>
+</div>
+
+<div class="box">
+	<img src="doge2.gif" style="float: left; margin-right: 20px;" />
+	<h2>Attention programmers!</h2>
+	<p>
+		DSON 2 is released as of Friday, 6. June 2014, 1600 UTC. It has some changes in order to make it easier to understand for Shiba Inu dogs. Please update your software code to accommodate the following changes:
+		<tt>nottrue</tt> and <tt>notfalse</tt> have been renamed to <tt>yes</tt> and <tt>no</tt> respectively. The empty value <tt>nullish</tt> was renamed to <tt>empty</tt>. Instead of <tt>next</tt>, shibe can now use <tt>,</tt> (comma) or <tt>.</tt> (dot) or <tt>!</tt> or <tt>?</tt> to separate object members, and <tt>and</tt> or <tt>also</tt> for array elements. Finally, unicode characters and numbers must now be given in octal form instead of hexadecimal or decimal respectively.
+	</p>
+</div>
+
+<p><b>DSON</b> (Doge Serialized Object Notation) is a data-interchange
+  format, that is easy to read and write for Shiba Inu dogs. It is easy for machines to
+  parse and generate. It is designed to be as similiar as possible to the
+  <a href="https://github.com/remixz/dogescript">DogeScript
+  Programming Language</a>. DSON is a text format that is not
+  language independent but uses conventions that are familiar to a wide variety of japanese dog breeds.
+  These properties make DSON an ideal data-interchange language for everything that involves Shiba Inu intercommunication.</p>
+<p>
+  Some examples of the DSON syntax and their JSON counterparts:
+  <pre class="box">
+    such "foo" is "bar". "doge" is "shibe" wow    <font color="gray">// {"foo": "bar", "doge": "shibe"}</font>
+    such "foo" is such "shiba" is "inu", "doge" is yes wow wow    <font color="gray">// {"foo": {"shiba": "inu", "doge": true}}</font>
+    such "foo" is so "bar" also "baz" and "fizzbuzz" many wow    <font color="gray">// {"foo": ["bar", "baz", "fizzbuzz"]}</font>
+    such "foo" is 42very3 wow    <font color="gray">// {"foo": 34e3}</font></pre>
+</p>
+<p>DSON, like JSON, is built on two structures:</p>
+<ul>
+  <li>A collection of name/value pairs. In various languages, this is realized
+    as an <i>object</i>, record, struct, dictionary, hash table, keyed list, or
+    associative array.</li>
+  <li>An ordered list of values. In most languages, this is realized as an <i>array</i>,
+    vector, list, or sequence.</li>
+</ul>
+<p>These are universal data structures. Virtually all modern
+dog-proof programming languages support them in one form or another. It makes sense
+that a data format that is interchangeable with programming languages also
+be based on these structures. All keywords used by DSON are case-sensitive and must be in lower case.</p>
+<p>In DSON, they take on these forms:</p>
+<p>An <i>object</i> is an unordered set of name/value pairs. An object
+  begins with <tt>such</tt> and ends with <tt>wow</tt>. Each name is followed
+  by <tt>is</tt> and the name/value pairs are separated by <tt>,</tt> (comma) or <tt>.</tt> (dot) or <tt>!</tt> or <tt>?</tt>.</p>
+
+<p><img src="object.png"></p>
+
+<p>An <i>array</i> is an ordered collection of values. An array begins
+  with <tt>so</tt> and ends with <tt>many</tt>. Values are separated
+  by <tt>and</tt> or <tt>also</tt>.</p>
+
+<p><img src="array.png"></p>
+
+<p>A <i>value</i> can be a <i>string</i> in double quotes, or a <i>number</i>,
+  or <tt>yes</tt> or <tt>no</tt> or <tt>empty</tt>, or an <i>object</i> or
+  an <i>array</i>. These structures can be nested.</p>
+
+<p><img src="value.gif"></p>
+
+<p>A <i>string</i> is a sequence of zero or more Unicode characters, wrapped
+  in double quotes, using backslash escapes. A character is represented as a
+  single character string. A string is very much like a C or Java string.</p>
+
+<p><img src="string.png"></p>
+
+<p>A <i>number</i> is very much like a C or Java number, except it is presented in the dog-friendly octal base.</p>
+
+<p><img src="number.gif"></p>
+
+<p>Whitespace can be inserted between any pair of tokens. Excepting
+  a few encoding details, that completely describes the language. wow.</p>
+
+
+<hr>
+<div style="float: left">
+  <p>DSON Libraries, Parsers and other kind of related Open Source Software:</p>
+  <ul>
+	<li>
+		ANTLR4: <span style="color: blueviolet;">wow. very unique. never hear.</span>
+		<ul>
+			<li><a href="https://github.com/sidfarkus/such-dson">such-dson</a>: DSON grammar plugin (by sidfarkus)</li>
+		</ul>
+	</li>
+	<li>
+		JavaScript: <span style="color: green;">so retro. much hipster.</span>
+		<ul>
+			<li><a href="http://jsfiddle.net/Ha65v/3/">DogeONtoJSON</a>: Converter with tests and examples (by baseketball)</li>
+			<li><a href="https://github.com/paulminer/JSON-js/blob/master/dson2.js">dson2.js</a>: Parser/Serializer, based on JSON2 (by paul_miner)</li>
+			<li><a href="https://github.com/kpdecker/dogeon">dogeon</a>: Parser/Serializer for Node.js (by kpdecker)</li>
+		</ul>
+	</li>
+	<li>
+		DogeScript: <span style="color: red;">wow. very inception.</span>
+		<ul>
+			<li><a href="https://github.com/remixz/DSON.djs">DSON.djs</a>: Parser/Serializer (by remixz, the god of DogeScript himself)</li>
+		</ul>
+	</li>
+	<li>
+		Perl 6: <span style="color: cornflowerblue;">get real.</span>
+		<ul>
+			<li><a href="https://github.com/xfix/Acme-DSON">Acme::DSON</a>: Parser/Serializer (by xfix)</li>
+		</ul>
+	</li>
+	<li>
+		Python: <span style="color: darkmagenta;">very spider. or is snake?</span>
+		<ul>
+			<li><a href="https://github.com/liam-middlebrook/JSONtoDogeON">JSONtoDogeON</a>: Parser/Serializer (by Liam Middlebrook)</li>
+		</ul>
+	</li>
+  </ul>
+</div>
+<br clear=left>
+<hr>
+<div>
+  <ul>
+    <li><a href="http://json.org/">The original JSON standard</a>, thank you for this Douglas Crockford!</li>
+    <li><a href="https://github.com/remixz/dogescript">Check out DogeScript for more shibe!</a></li>
+  </ul>
+</div>
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://dogeon.org/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 6]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://dogeon.org/piwik/piwik.php?idsite=6" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body></html>
