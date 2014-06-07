@@ -16,6 +16,13 @@ There are already a wide variety of parsers and serializers available for this v
 If you want to write your own implementation and see it added to these files and the website, please create a new issue on [GitHub](https://github.com/cerlestes/DSON/issues).
 
 
+## Localization
+
+You're more than welcome to add more localized versions, so that DSON can become a truly international doge intercommunication standard.
+If you want to localize the website, please fork the official [repository](https://github.com/cerlestes/DSON), copy the index.html and create a pull request once you've implemented your version.
+Please keep in mind to leave the keywords and everything language-related in tact! Do only change the explanatory part of the website. Have a look at the index-si.html file as a reference.
+
+
 ## Share the love!
 
 Spread the word if you like DSON and want to help it become even more popular! Write and blog about it, tell your friends and your grandma!
