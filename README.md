@@ -11,9 +11,9 @@ To make this goal possible and push on this idea, the DSON language is specified
 
 ## Implementations
 
-There are already a wide variety of parsers and serializers available for this very new language, with the most sophisticated of them being [DSON.djs](https://github.com/remixz/DSON.djs), a DSON library written in [DogeScript](https://github.com/remixz/dogescript) by its very author. It is most likely going to be implemented in the standard library of DogeScript 3.
+There are already a wide variety of parsers and serializers available for this very new language, with the most sophisticated of them being [DSON.djs](https://github.com/remixz/DSON.djs), a DSON library written in [DogeScript](https://github.com/remixz/dogescript) by its very author. It is most likely going to be implemented in the standard library of DogeScript 3 and is to be treated as the reference implementation.
 
-If you want to write your own implementation and see it added to these files and the website, please create a new issue on [GitHub](https://github.com/cerlestes/DSON/issues).
+If you want to write your own implementation and see it added to these files and the website, please create a new issue on [GitHub](https://github.com/cerlestes/DSON/issues) and I'll gladly do so!
 
 
 ## Localization
