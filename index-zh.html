@@ -1,6 +1,6 @@
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Content-Language" content="zh">
 <title>DSON - Doge Serialized Object Notation</title>
 <style>
 body {
@@ -52,7 +52,7 @@ pre {
         alt="DSON logo" align="left" border="0" height="160" width="160"></td>
     <td align="center" valign="middle">
       <div style="border: 2px solid black; padding: 10px; background-color: white; margin-left: 40px; margin-right: 40px; font-family: serif;">
-        <h1 align="center">Introducing Doge Serialized Object Notation</h1>
+        <h1 align="center">介绍 Doge Serialized Object Notation</h1>
       </div>
     </td>
   </tr>
@@ -147,69 +147,64 @@ pre {
   </dl>
 </div>
 
-<p><b>DSON</b> (Doge Serialized Object Notation) is a data-interchange
-  format, that is easy to read and write for Shiba Inu dogs. It is easy for machines to
-  parse and generate. It is designed to be as similiar as possible to the
-  <a href="https://github.com/remixz/dogescript">DogeScript
-  Programming Language</a>. DSON is a text format that is not
-  language independent but uses conventions that are familiar to a wide variety of japanese dog breeds.
-  These properties make DSON an ideal data-interchange language for everything that involves Shiba Inu intercommunication.</p>
+<p><b>DSON</b> (Doge Serialized Object Notation) 是一种数据交换格式，
+  易于柴犬阅读和编写，同时也易于机器解析和生成。它被设计成与
+  <a href="https://github.com/remixz/dogescript">DogeScript 编程语言</a> 非常相似。
+  DSON 并没有采用独立于语言的文本格式，并使用了各种日本犬种的习惯。
+  这些特性使得 DSON 成为理想的涉及到所有与柴犬相关通信的数据交换语言。</p>
 <p>
-  Some examples of the DSON syntax and their JSON counterparts:
+  下面这些例子展示了 DSON 的语法还有和 JSON 相对应的语法：
   <pre class="box">
     such "foo" is "bar". "doge" is "shibe" wow    <font color="gray">// {"foo": "bar", "doge": "shibe"}</font>
     such "foo" is such "shiba" is "inu", "doge" is yes wow wow    <font color="gray">// {"foo": {"shiba": "inu", "doge": true}}</font>
     such "foo" is so "bar" also "baz" and "fizzbuzz" many wow    <font color="gray">// {"foo": ["bar", "baz", "fizzbuzz"]}</font>
     such "foo" is 42, "bar" is 42very3 wow    <font color="gray">// {"foo": 34, "bar": 17408}</font></pre>
 </p>
-<p>DSON, like JSON, is built on two structures:</p>
+<p>像 JSON 一样，DSON 构建于两种结构：</p>
 <ul>
-  <li>A collection of name/value pairs. In various languages, this is realized
-    as an <i>object</i>, record, struct, dictionary, hash table, keyed list, or
-    associative array.</li>
-  <li>An ordered list of values. In most languages, this is realized as an <i>array</i>,
-    vector, list, or sequence.</li>
+  <li>“名称/值”对的集合（A collection of name/value pairs）。不同的语言中，它被理解为<i>对象（object）</i>、
+  纪录（record）、结构（struct）、字典（dictionary）、哈希表（hash table）、
+  有键列表（keyed list），或者关联数组 （associative array）。 </li>
+  <li>值的有序列表（An ordered list of values）。在大部分语言中，它被理解为<i>数组（array）</i>、
+  向量（vector）、集合（list），或者序列（sequence） </li>
 </ul>
-<p>These are universal data structures. Virtually all modern
-dog-proof programming languages support them in one form or another. It makes sense
-that a data format that is interchangeable with programming languages also
-be based on these structures. All keywords used by DSON are case-sensitive and must be in lower case.</p>
-<p>In DSON, they take on these forms:</p>
-<p>An <i>object</i> is an unordered set of name/value pairs. An object
-  begins with <tt>such</tt> and ends with <tt>wow</tt>. Each name is followed
-  by <tt>is</tt> and the name/value pairs are separated by <tt>,</tt> (comma) or <tt>.</tt> (dot) or <tt>!</tt> or <tt>?</tt>.</p>
+<p>这些都是常见的数据结构。事实上大部分现代的犬类的编程语言都以某种形式支持它们。
+这使得一种数据格式在同样基于这些结构的编程语言之间交换成为可能。
+所有 DSON 使用的关键字都是大小写敏感的并且必须是小写字母。</p>
+<p>JSON 具有以下这些形式：</p>
+<p><i>对象</i> 是一个无序的 “‘名称/值’对” 集合。
+一个对象以 <tt>such</tt> 开始，以 <tt>wow</tt> 结束。每个“名称”后跟一个 <tt>is</tt>。
+“‘名称/值’对” 之间使用 <tt>,</tt>（逗号）、<tt>.</tt> (句号) 或 <tt>!</tt> 或 <tt>?</tt> 分隔。</p>
 
 <p><img src="object.png"></p>
 
-<p>An <i>array</i> is an ordered collection of values. An array begins
-  with <tt>so</tt> and ends with <tt>many</tt>. Values are separated
-  by <tt>and</tt> or <tt>also</tt>.</p>
+<p><i>数组</i> 是 值（value）的有序集合。一个数组以 <tt>so</tt> 开始，以 <tt>many</tt> 结束。
+值之间使用 <tt>and</tt> 或 <tt>also</tt> 分隔。 </p>
 
 <p><img src="array.png"></p>
 
-<p>A <i>value</i> can be a <i>string</i> in double quotes, or a <i>number</i>,
-  or <tt>yes</tt> or <tt>no</tt> or <tt>empty</tt>, or an <i>object</i> or
-  an <i>array</i>. These structures can be nested.</p>
+<p><i>值（value）</i> 可以是双引号括起来的 <i>字符串（string）</i>、<i>数值(number)</i>、
+<tt>yes</tt>、<tt>no</tt>、<tt>empty</tt>、对象（object）或者数组（array）。这些结构可以嵌套。 </p>
 
 <p><img src="value.png"></p>
 
-<p>A <i>string</i> is a sequence of zero or more Unicode characters, wrapped
-  in double quotes, using backslash escapes. A character is represented as a
-  single character string. A string is very much like a C or Java string.</p>
+<p><i>字符串（string）</i> 是由双引号包围的任意数量Unicode字符的集合，使用反斜线转义。
+一个字符（character）即一个单独的字符串（character string）。</p>
+
+<p><i>字符串（string）</i> 与C或者Java的字符串非常相似。 </p>
 
 <p><img src="string.png"></p>
 
-<p>A <i>number</i> is very much like a C or Java number, except it is presented in the dog-friendly octal base.</p>
+<p><i>数值（number）</i> 也与 C 或者 Java 的数值非常相似。除去现在方便犬类使用的八进制格式。</p>
 
 <p><img src="number.png"></p>
 
-<p>Whitespace can be inserted between any pair of tokens. Excepting
-  a few encoding details, that completely describes the language. wow.</p>
+<p>空白可以加入到任何符号之间。以下描述了完整的语言。wow。</p>
 
 
 <hr>
 <div style="float: left">
-  <p>DSON Libraries, Parsers and other kind of related Open Source Software:</p>
+  <p>DSON 类库、解析器与一些有关的开源软件：</p>
   <ul>
 	<li>
 		<span style="color: blueviolet;">ANTLR4:</span>
@@ -233,14 +228,7 @@ be based on these structures. All keywords used by DSON are case-sensitive and m
 		<span style="color: red;">DogeScript:</span>
 		<ul>
 			<li><a href="https://github.com/remixz/DSON.djs">DSON.djs</a>: Parser/Serializer (by remixz, the god of DogeScript himself) <span style="color: red; font-weight: bold;">[shibe approves!]</span></li>
-			<li><a href="https://github.com/vpzomtrrfrt/DSON">djs-dson</a>: Parser/Serializer (by vpzomtrrfrt)</li>
 		</ul>
-	</li>
-	<li>
-	    <span style="color: darkmagenta;">Java:</span>
-	    <ul>
-	        <li><a href="https://github.com/bhaeussermann/DSON-Java">DSON-Java</a>: Parser/Serializer (by bhaeussermann)</li>
-	    </ul>
 	</li>
 	<li>
 		<span style="color: green;">JavaScript:</span>
@@ -250,12 +238,6 @@ be based on these structures. All keywords used by DSON are case-sensitive and m
 			<li><a href="https://github.com/kpdecker/dogeon">dogeon</a>: Parser/Serializer for Node.js (by kpdecker)</li>
 			<li><a href="https://github.com/JDeuce/dson_parser">dson_parser</a>: Parser based on PEGjs (by JDeuce)</li>
 		</ul>
-	</li>
-	<li>
-	  <span style="color: cornflowerblue;">Go:</span>
-	  <ul>
-	    <li><a href="https://github.com/gabstv/dson2json">dson2json</a>: Converter (by gabstv)</li>
-	  </ul>
 	</li>
 	<li>
 		<span style="color: cornflowerblue;">Haskell:</span>
