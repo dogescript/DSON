@@ -6,7 +6,7 @@
 
 Doge Serialized Object Notation (or DSON, perviously DogeON) is a data-interchange format that is easy to read and write for Shiba Inu dogs. 
 It strives to replace JSON and XML as the major players in terms of intercommunication between a wide range of services for Shiba Inus and other doge breeds alike.
-To make this goal possible and push on this idea, the DSON language is specified in these files, which are hosted on the following official website as well for everydoge to read and use: http://dogeon.org
+To make this goal possible and push on this idea, the DSON language is specified in these files, which are hosted on the following official website as well for everydoge to read and use: https://dogeon.xyz/
 
 
 ## Implementations
